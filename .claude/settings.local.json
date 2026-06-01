@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm build)",
+      "Bash(npx next build)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=1200&q=80\" -o wheelchair-van.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1200&q=80\" -o dialysis-treatment.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80\" -o medical-care.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&q=80\" -o ambulance-service.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1551076805-e1869033e561?w=1200&q=80\" -o hospital-corridor.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?w=1200&q=80\" -o senior-care.jpg)",
+      "Bash(npx tsc --noEmit --pretty)",
+      "Bash(wc -l \"d:\\\\Projects\\\\Personal\\\\MED STATS BILLING\\\\CrtOhio/app/\\(marketing\\)\"/*/*.tsx \"d:\\\\Projects\\\\Personal\\\\MED STATS BILLING\\\\CrtOhio/app/\\(marketing\\)\"/*.tsx)",
+      "Bash(ls -lh \"d:\\\\Projects\\\\Personal\\\\MED STATS BILLING\\\\CrtOhio/app/\\(marketing\\)/services/\")",
+      "Bash(find \"d:/Projects/Personal/MED STATS BILLING/CrtOhio/app/\\(auth\\)\" -type f)",
+      "WebFetch(domain:www.prisma.io)",
+      "Bash(pnpm prisma db seed --config prisma/prisma.config.ts)",
+      "Bash(while read f)",
+      "Bash(do sed -i 's/text-heading/text-primary/g' \"$f\")",
+      "Bash(done)",
+      "Bash(npx tsx prisma/seed.ts)"
+    ]
+  }
+}

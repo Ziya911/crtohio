@@ -1,0 +1,177 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider  = "postgresql"
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum RideStatus {
+  NEW_REQUEST
+  UNDER_REVIEW
+  CONFIRMED
+  DECLINED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+model User {
+  id              String    @id @default(cuid())
+  email           String    @unique
+  emailVerified   DateTime?
+  passwordHash    String?
+  name            String?
+  phone           String?
+  dateOfBirth     DateTime?
+  role            Role      @default(USER)
+  isActive        Boolean   @default(true)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  rides           Ride[]
+  sessions        Session[]
+  accounts        Account[]
+
+  @@index([email])
+  @@index([role])
+}
+
+model Ride {
+  id                  String      @id @default(cuid())
+  publicId            String      @unique @default(cuid())
+
+  // Ownership (null = guest booking)
+  userId              String?
+  user                User?       @relation(fields: [userId], references: [id])
+
+  // Ride type
+  rideType            String      // "one_way" | "round_trip" | "recurring"
+  recurringPattern    String?     // "daily" | "weekly" | "mwf" | "custom"
+  recurringDetails    Json?
+
+  // Passenger
+  passengerName       String
+  passengerDob        DateTime
+  passengerPhone      String
+  passengerEmail      String?
+  emergencyContact    String?
+
+  // Pickup
+  pickupAddress       String
+  pickupApt           String?
+  pickupLocationType  String      // "home" | "hospital" | "nursing_home" | etc.
+  pickupLat           Float?
+  pickupLng           Float?
+  pickupDateTime      DateTime
+
+  // Drop-off
+  dropoffAddress      String
+  dropoffFacilityName String?
+  dropoffAppointmentTime DateTime?
+  dropoffDepartment   String?
+  dropoffLat          Float?
+  dropoffLng          Float?
+
+  // Transport
+  transportType       String      // "ambulatory" | "wheelchair"
+  needsDoorAssist     Boolean     @default(false)
+  needsBuildingAssist Boolean     @default(false)
+  hasCompanion        Boolean     @default(false)
+  wheelchairOwned     Boolean?
+  wheelchairPowered   Boolean?
+  hasStairs           Boolean?
+
+  // Payer
+  payerType           String      // "medicaid" | "insurance" | "facility" | "private_pay"
+  payerDetails        Json
+
+  // Pricing
+  estimatedMiles      Float?
+  estimatedDuration   Int?        // minutes
+  estimatedPrice      Decimal?    @db.Decimal(10, 2)
+  finalPrice          Decimal?    @db.Decimal(10, 2)
+
+  // Notes
+  specialInstructions String?
+  gateCode            String?
+  mobilityNotes       String?
+
+  // Status
+  status              RideStatus  @default(NEW_REQUEST)
+  dispatchNotes       String?
+  declineReason       String?
+
+  // Audit
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+  reviewedAt          DateTime?
+  reviewedBy          String?
+  confirmedAt         DateTime?
+  completedAt         DateTime?
+  cancelledAt         DateTime?
+
+  communications      Communication[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([pickupDateTime])
+  @@index([publicId])
+}
+
+model Communication {
+  id          String   @id @default(cuid())
+  rideId      String
+  ride        Ride     @relation(fields: [rideId], references: [id], onDelete: Cascade)
+  type        String   // "email" | "sms" | "phone" | "note" | "status_change"
+  direction   String   // "inbound" | "outbound" | "internal"
+  content     String
+  createdAt   DateTime @default(now())
+  createdBy   String?
+
+  @@index([rideId])
+}
+
+// NextAuth tables
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
