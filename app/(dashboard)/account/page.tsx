@@ -146,7 +146,7 @@ export default async function AccountDashboardPage() {
             </div>
           ) : (
             <div className="space-y-3">
-              {recentRides.map((ride) => {
+              {recentRides.map((ride : any) => {
                 const statusConfig = formatRideStatus(ride.status);
                 return (
                   <Link
