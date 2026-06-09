@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { auth } from "@/lib/auth";
+import type { Ride } from '@prisma/client'
 import { db } from "@/lib/db";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -59,6 +60,19 @@ export default async function UserRidesPage({
   ]);
 
   const totalPages = Math.ceil(totalCount / ITEMS_PER_PAGE);
+
+  type RideRow = Pick<
+    Ride,
+    | 'id'
+    | 'publicId'
+    | 'pickupAddress'
+    | 'dropoffAddress'
+    | 'pickupDateTime'
+    | 'status'
+    | 'transportType'
+    | 'estimatedPrice'
+    | 'finalPrice'
+  >
 
   return (
     <div className="mx-auto max-w-5xl space-y-6">
@@ -126,7 +140,7 @@ export default async function UserRidesPage({
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {rides.map((ride) => {
+                {rides.map((ride: RideRow) => {
                   const statusConfig = formatRideStatus(ride.status);
                   return (
                     <TableRow key={ride.id}>
