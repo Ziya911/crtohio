@@ -194,10 +194,25 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t">
         <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="flex items-center gap-1.5 text-xs text-white/40">
-            © {currentYear} {SITE_NAME}. Made with{" "}
-            <Heart className="h-3 w-3 text-emergency fill-emergency" /> in {BUSINESS_ADDRESS_REGION === 'FL' ? 'Florida' : 'Ohio'}.
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1.5">
+            <p className="text-xs text-white/40">
+              All Rights Reserved © {currentYear} MedStats Billing LLC
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1.5">
+            <p className="text-xs text-white/40">
+              Developed by{" "}
+              <a
+                href="https://medstatsbilling.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/60 hover:text-accent transition-colors font-medium"
+              >
+                MedStats Billing LLC
+              </a>
+            </p>
+          </div>
           <div className="flex items-center gap-5">
             <Link
               href="/privacy"
