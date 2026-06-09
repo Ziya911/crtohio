@@ -3,17 +3,24 @@
 import * as React from "react"
 import { Avatar as AvatarPrimitive } from "@base-ui/react/avatar"
 
+// Workaround: some downstream type definitions cause a conflicting `key` type
+// error during `tsc` / Next.js build. Cast the primitives to `any` for JSX
+// usage to avoid the mismatch while preserving runtime behavior.
+const AvatarRoot: any = AvatarPrimitive.Root
+const AvatarImagePrimitive: any = AvatarPrimitive.Image
+const AvatarFallbackPrimitive: any = AvatarPrimitive.Fallback
+
 import { cn } from "@/lib/utils"
 
 function Avatar({
   className,
   size = "default",
   ...props
-}: AvatarPrimitive.Root.Props & {
+}: React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> & {
   size?: "default" | "sm" | "lg"
 }) {
   return (
-    <AvatarPrimitive.Root
+    <AvatarRoot
       data-slot="avatar"
       data-size={size}
       className={cn(
@@ -25,9 +32,9 @@ function Avatar({
   )
 }
 
-function AvatarImage({ className, ...props }: AvatarPrimitive.Image.Props) {
+function AvatarImage({ className, ...props }: React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>) {
   return (
-    <AvatarPrimitive.Image
+    <AvatarImagePrimitive
       data-slot="avatar-image"
       className={cn(
         "aspect-square size-full rounded-full object-cover",
@@ -41,9 +48,9 @@ function AvatarImage({ className, ...props }: AvatarPrimitive.Image.Props) {
 function AvatarFallback({
   className,
   ...props
-}: AvatarPrimitive.Fallback.Props) {
+}: React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>) {
   return (
-    <AvatarPrimitive.Fallback
+    <AvatarFallbackPrimitive
       data-slot="avatar-fallback"
       className={cn(
         "flex size-full items-center justify-center rounded-full bg-muted text-sm text-muted-foreground group-data-[size=sm]/avatar:text-xs",
