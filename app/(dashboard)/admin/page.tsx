@@ -30,7 +30,7 @@ import {
   CalendarIcon,
   BanIcon,
 } from 'lucide-react'
-import type { RideStatus } from '@prisma/client'
+import type { RideStatus } from '@/lib/ride-status'
 
 const STATUS_CONFIG: Record<
   RideStatus,

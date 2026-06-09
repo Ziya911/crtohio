@@ -18,7 +18,7 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { SearchIcon, FilterIcon, XIcon, Loader2Icon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
-import type { RideStatus } from '@prisma/client'
+import type { RideStatus } from '@/lib/ride-status'
 
 const STATUS_CONFIG: Record<
   RideStatus,

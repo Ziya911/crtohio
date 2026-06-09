@@ -25,7 +25,7 @@ import {
   NavigationIcon,
 } from 'lucide-react'
 import RideAdminActions from '@/components/dashboard/RideAdminActions'
-import type { RideStatus } from '@prisma/client'
+import type { RideStatus } from '@/lib/ride-status'
 
 const STATUS_CONFIG: Record<
   RideStatus,

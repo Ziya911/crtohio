@@ -1,18 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { db } from '@/lib/db'
-import type { RideStatus, Prisma } from '@prisma/client'
+import type { Prisma } from '@prisma/client'
+import { RIDE_STATUSES, type RideStatus } from '@/lib/ride-status'
 
-const VALID_STATUSES: RideStatus[] = [
-  'NEW_REQUEST',
-  'UNDER_REVIEW',
-  'CONFIRMED',
-  'DECLINED',
-  'IN_PROGRESS',
-  'COMPLETED',
-  'CANCELLED',
-  'NO_SHOW',
-]
+const VALID_STATUSES = RIDE_STATUSES
 
 export async function GET(request: NextRequest) {
   const session = await auth()

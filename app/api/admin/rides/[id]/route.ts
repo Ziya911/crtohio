@@ -2,33 +2,15 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { db } from '@/lib/db'
 import { z } from 'zod'
-import type { RideStatus } from '@prisma/client'
+import { RIDE_STATUSES, type RideStatus } from '@/lib/ride-status'
 import { sendEmail } from '@/lib/email/send'
 import { RideStatusUpdateEmail } from '@/lib/email/templates/RideStatusUpdate'
 import { SITE_NAME } from '@/lib/constants'
 
-const VALID_STATUSES: RideStatus[] = [
-  'NEW_REQUEST',
-  'UNDER_REVIEW',
-  'CONFIRMED',
-  'DECLINED',
-  'IN_PROGRESS',
-  'COMPLETED',
-  'CANCELLED',
-  'NO_SHOW',
-]
+const VALID_STATUSES = RIDE_STATUSES
 
 const updateRideSchema = z.object({
-  status: z.enum([
-    'NEW_REQUEST',
-    'UNDER_REVIEW',
-    'CONFIRMED',
-    'DECLINED',
-    'IN_PROGRESS',
-    'COMPLETED',
-    'CANCELLED',
-    'NO_SHOW',
-  ]).optional(),
+  status: z.enum(RIDE_STATUSES).optional(),
   dispatchNotes: z.string().nullable().optional(),
   declineReason: z.string().nullable().optional(),
   finalPrice: z.number().min(0).nullable().optional(),

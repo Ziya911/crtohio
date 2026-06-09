@@ -1,4 +1,4 @@
-import type { RideStatus } from '@prisma/client'
+import type { RideStatus } from '@/lib/ride-status'
 
 export const RIDE_STATUS_CONFIG: Record<
   RideStatus,
