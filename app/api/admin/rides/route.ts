@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { db } from '@/lib/db'
-import type { Prisma } from '@prisma/client'
 import { RIDE_STATUSES, type RideStatus } from '@/lib/ride-status'
 
 const VALID_STATUSES = RIDE_STATUSES
+
+type RideWhereInput = NonNullable<NonNullable<Parameters<typeof db.ride.findMany>[0]>['where']>
 
 export async function GET(request: NextRequest) {
   const session = await auth()
@@ -18,7 +19,7 @@ export async function GET(request: NextRequest) {
   const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10) || 1)
   const limit = Math.min(50, Math.max(1, parseInt(searchParams.get('limit') || '10', 10) || 10))
 
-  const where: Prisma.RideWhereInput = {}
+  const where: RideWhereInput = {}
 
   if (statusFilter && VALID_STATUSES.includes(statusFilter)) {
     where.status = statusFilter

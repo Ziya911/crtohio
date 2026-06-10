@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { db } from '@/lib/db'
-import type { Prisma } from '@prisma/client'
+type UserWhereInput = NonNullable<NonNullable<Parameters<typeof db.user.findMany>[0]>['where']>
 
 export async function GET(request: NextRequest) {
   const session = await auth()
@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
   const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10) || 1)
   const limit = Math.min(50, Math.max(1, parseInt(searchParams.get('limit') || '10', 10) || 10))
 
-  const where: Prisma.UserWhereInput = { role: 'USER' }
+  const where: UserWhereInput = { role: 'USER' }
 
   if (searchQuery) {
     where.OR = [
