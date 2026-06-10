@@ -159,7 +159,7 @@ export default async function AdminRideDetailPage({
     notFound()
   }
 
-  const statusConfig = STATUS_CONFIG[ride.status]
+  const statusConfig = STATUS_CONFIG[ride.status as RideStatus]
 
   return (
     <div className="space-y-6">
