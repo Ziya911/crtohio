@@ -641,7 +641,7 @@ export default async function AdminRideDetailPage({
                 </p>
               ) : (
                 <div className="space-y-4">
-                  {ride.communications.map((comm) => {
+                  {ride.communications.map((comm: { id: string; type: string; direction: string; content: string; createdAt: Date; createdBy: string | null }) => {
                     const commConfig = COMM_TYPE_CONFIG[comm.type] || {
                       label: comm.type,
                       className: 'bg-gray-100 text-gray-800',
