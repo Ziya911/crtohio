@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { db } from '@/lib/db'
 import { z } from 'zod'
+import type { PrismaClient } from '@prisma/client'
 import { RIDE_STATUSES, type RideStatus } from '@/lib/ride-status'
 import { sendEmail } from '@/lib/email/send'
 import { RideStatusUpdateEmail } from '@/lib/email/templates/RideStatusUpdate'
@@ -139,7 +140,7 @@ export async function PATCH(
   }
 
   // Perform the update and create a status change communication in a transaction
-  const updatedRide = await db.$transaction(async (tx) => {
+  const updatedRide = await db.$transaction(async (tx: Omit<PrismaClient, '$connect' | '$disconnect' | '$on' | '$transaction' | '$use' | '$extends'>) => {
     const updated = await tx.ride.update({
       where: { id },
       data: updateData,
