@@ -38,7 +38,6 @@
     "zod": "^4.4.3",
     "zustand": "^5.0.13"
   },
-  "@types/react": "19.2.14",
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
@@ -53,7 +52,8 @@
     "typescript": "^5"
   },
   "prisma": {
-    "seed": "tsx prisma/seed.ts"
+    "seed": "tsx prisma/seed.ts",
+    "config": "prisma/prisma.config.ts"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

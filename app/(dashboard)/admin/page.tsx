@@ -313,7 +313,7 @@ export default async function AdminDashboardPage() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {recentRides.map((ride) => {
+                    {recentRides.map((ride: (typeof recentRides)[number]) => {
                       const statusConfig = STATUS_CONFIG[ride.status]
                       return (
                         <TableRow key={ride.id}>
