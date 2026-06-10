@@ -314,7 +314,7 @@ export default async function AdminDashboardPage() {
                   </TableHeader>
                   <TableBody>
                     {recentRides.map((ride: (typeof recentRides)[number]) => {
-                      const statusConfig = STATUS_CONFIG[ride.status]
+                      const statusConfig = STATUS_CONFIG[ride.status as RideStatus]
                       return (
                         <TableRow key={ride.id}>
                           <TableCell>
