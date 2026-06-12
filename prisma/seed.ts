@@ -16,15 +16,6 @@ async function main() {
     throw new Error('ADMIN_EMAIL and ADMIN_PASSWORD must be set in .env')
   }
 
-  // Remove old admin if it exists
-  const oldAdmin = await prisma.user.findUnique({ where: { email: 'admin@crtohio.com' } })
-  if (oldAdmin) {
-    await prisma.session.deleteMany({ where: { userId: oldAdmin.id } })
-    await prisma.account.deleteMany({ where: { userId: oldAdmin.id } })
-    await prisma.user.delete({ where: { id: oldAdmin.id } })
-    console.log('Old admin removed: admin@crtohio.com')
-  }
-
   const existing = await prisma.user.findUnique({ where: { email: adminEmail } })
   if (!existing) {
     await prisma.user.create({
