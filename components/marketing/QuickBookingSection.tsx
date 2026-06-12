@@ -68,7 +68,7 @@ export function QuickBookingSection() {
                 {[
                   'No account required — book as a guest',
                   'Get an instant price estimate',
-                  'Medicaid, insurance, and private pay accepted',
+                  'Insurance and private pay accepted',
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <Shield className="h-5 w-5 text-accent shrink-0" />

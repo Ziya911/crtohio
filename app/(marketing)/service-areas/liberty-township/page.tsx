@@ -264,9 +264,9 @@ export default function LibertyTownshipPage() {
                     Affordable and Transparent
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    We accept Medicaid managed care plans, private insurance, and facility
-                    contracts. Self-pay riders get transparent pricing with estimates provided
-                    before booking. No surge pricing, no hidden fees, no surprises.
+                    We accept private insurance and facility contracts. Self-pay riders get
+                    transparent pricing with estimates provided before booking.
+                    No surge pricing, no hidden fees, no surprises.
                   </p>
                 </div>
               </div>

@@ -263,7 +263,7 @@ export default function WestChesterPage() {
                     Multiple Payment Options
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    We work with Medicaid, private insurance providers, and healthcare facilities
+                    We work with private insurance providers and healthcare facilities
                     to cover your medical transportation costs. Private pay is always available
                     with clear, upfront pricing and no hidden surcharges.
                   </p>

@@ -36,9 +36,9 @@ const WHY_CHOOSE_US = [
   },
   {
     icon: <CreditCard className="h-6 w-6" />,
-    title: 'Insurance & Medicaid',
+    title: 'Flexible Payment Options',
     description:
-      'We work with Medicaid, private insurance, and facility billing to make transportation accessible.',
+      'We work with private insurance, facility billing, and private pay to make transportation accessible.',
     gradient: 'from-accent-dark to-accent',
   },
   {

@@ -269,10 +269,10 @@ export default function MiddletownPage() {
                     Coverage for Every Situation
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    We accept Medicaid, private insurance, facility contracts, and private pay.
-                    Whether you are covered by Ohio Medicaid, have commercial health insurance,
-                    or are paying out of pocket, we offer transparent pricing and multiple ways
-                    to make medical transportation affordable.
+                    We accept private insurance, facility contracts, and private pay.
+                    Whether you have commercial health insurance or are paying out of pocket,
+                    we offer transparent pricing and multiple ways to make medical transportation
+                    affordable.
                   </p>
                 </div>
               </div>

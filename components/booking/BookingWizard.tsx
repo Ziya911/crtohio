@@ -65,6 +65,9 @@ export function BookingWizard({ userPrefill }: { userPrefill?: UserPrefill }) {
   function handleStepClick(step: number) {
     // Only allow clicking on completed steps or the current step
     if (completedSteps.includes(step) || step < currentStep) {
+      // Save current step's data before navigating away (ignore validation errors —
+      // the user is navigating back to review/edit a prior step, not advancing)
+      validateRef.current?.()
       goToStep(step)
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }

@@ -204,7 +204,7 @@ export default function ServicesPage() {
               },
               {
                 title: 'Multiple Payment Options',
-                text: 'We accept Medicaid, private insurance, facility billing, and private pay. We work to make transport accessible to everyone.',
+                text: 'We accept private insurance, facility billing, and private pay. We work to make transport accessible to everyone.',
                 num: '04',
               },
             ].map((item) => (

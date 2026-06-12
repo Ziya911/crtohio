@@ -125,9 +125,8 @@ export default function CincinnatiPage() {
                 dialysis treatments, physical therapy sessions, and follow-up care.
               </p>
               <p>
-                For many Cincinnati residents, especially seniors, individuals with disabilities,
-                and Medicaid beneficiaries, getting to these appointments reliably is a real
-                challenge. Public transit options like Metro buses may not accommodate wheelchair
+                For many Cincinnati residents, especially seniors and individuals with disabilities,
+                getting to these appointments reliably is a real challenge. Public transit options like Metro buses may not accommodate wheelchair
                 users or reach suburban medical offices easily. Ride-sharing services lack the
                 specialized training and vehicle accommodations that medical passengers require.
                 {SITE_NAME} bridges this gap by providing professional, NEMT-focused
@@ -246,13 +245,11 @@ export default function CincinnatiPage() {
                 </div>
                 <div>
                   <h3 className="font-heading text-lg font-semibold text-primary mb-2">
-                    Medicaid and Insurance Accepted
+                    Insurance and Private Pay Accepted
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Many Cincinnati residents qualify for Medicaid-covered medical transportation.
-                    We work with Medicaid managed care plans and accept private insurance to
-                    minimize out-of-pocket costs. Private pay options are also available with
-                    transparent, upfront pricing.
+                    We accept private insurance and private pay to minimize out-of-pocket costs.
+                    Transparent, upfront pricing means no surprises when you book.
                   </p>
                 </div>
               </div>

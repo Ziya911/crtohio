@@ -110,7 +110,7 @@ export default function ServiceAreasPage() {
               </div>
               <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-full border border-white/10">
                 <ArrowRight className="h-4 w-4 text-accent" />
-                Medicaid Accepted
+                Insurance & Private Pay
               </div>
             </div>
           </div>

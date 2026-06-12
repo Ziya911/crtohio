@@ -121,8 +121,8 @@ export default function HamiltonPage() {
               </p>
               <p>
                 Transportation to medical appointments is a significant barrier for many Hamilton
-                residents, particularly seniors, individuals with disabilities, and those on
-                Medicaid. The city&apos;s public transit options are limited compared to
+                residents, particularly seniors and individuals with disabilities.
+                The city&apos;s public transit options are limited compared to
                 Cincinnati, and ride-sharing services do not provide the specialized assistance
                 that medical passengers often need. {SITE_NAME} fills this critical gap by
                 offering NEMT service tailored to Hamilton&apos;s community. We provide
@@ -247,14 +247,12 @@ export default function HamiltonPage() {
                 </div>
                 <div>
                   <h3 className="font-heading text-lg font-semibold text-primary mb-2">
-                    Medicaid-Friendly Service
+                    Flexible Payment Options
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    A significant portion of Hamilton&apos;s population qualifies for Medicaid-
-                    covered medical transportation. We work with Medicaid managed care plans to
-                    ensure eligible residents can access rides to their medical appointments
-                    without financial barriers. Private pay and insurance options are also
-                    available.
+                    We accept private insurance and private pay to ensure Hamilton residents
+                    can access rides to their medical appointments. Transparent, upfront pricing
+                    means no surprises when you book.
                   </p>
                 </div>
               </div>

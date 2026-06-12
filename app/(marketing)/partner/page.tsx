@@ -59,7 +59,7 @@ const BENEFITS = [
     icon: Building2,
     title: 'Streamlined Billing',
     description:
-      'We offer consolidated monthly billing for facility partners, eliminating the hassle of per-ride invoicing. Work with Medicaid, private insurance, or direct facility contracts — whatever works best for your organization.',
+      'We offer consolidated monthly billing for facility partners, eliminating the hassle of per-ride invoicing. Work with private insurance or direct facility contracts — whatever works best for your organization.',
   },
 ]
 

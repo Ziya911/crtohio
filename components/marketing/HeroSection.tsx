@@ -102,7 +102,7 @@ export function HeroSection() {
               className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-xl"
             >
               Providing compassionate non-emergency medical transportation across Cincinnati,
-              Mason, West Chester, and surrounding Ohio communities. Medicaid accepted.
+              Mason, West Chester, and surrounding Ohio communities.
             </motion.p>
 
             <motion.div

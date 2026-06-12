@@ -127,8 +127,8 @@ export default function MasonPage() {
                 Road corridor, transportation to the Lindner Center of HOPE for outpatient
                 mental health treatment, or a safe ride home following a procedure at Bethesda
                 Butler Hospital, our professionally trained drivers and well-maintained
-                vehicles ensure you travel comfortably and arrive on time. We accept Medicaid,
-                private insurance, and private pay to make medical transportation accessible
+                vehicles ensure you travel comfortably and arrive on time. We accept private
+                insurance and private pay to make medical transportation accessible
                 to all Mason residents.
               </p>
             </div>
@@ -264,7 +264,7 @@ export default function MasonPage() {
                     Flexible Payment Options
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    We accept Medicaid, private insurance plans, and facility contracts. For
+                    We accept private insurance plans and facility contracts. For
                     self-pay riders, we offer transparent pricing with no hidden fees. Get a
                     fare estimate before you book so there are no surprises.
                   </p>
