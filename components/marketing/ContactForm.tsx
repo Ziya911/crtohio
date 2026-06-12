@@ -197,7 +197,7 @@ export function ContactForm() {
       <p className="text-xs text-muted-foreground">
         By submitting this form, you agree to our{' '}
         <Link href="/privacy" className="text-primary hover:underline">Privacy Policy</Link>.
-        We will never share your information with third parties.
+        Your information is used to coordinate your transportation services. Certain details may be shared with dispatch providers or service partners as needed to fulfill your request. We do not sell your information to third parties.
       </p>
     </form>
   )

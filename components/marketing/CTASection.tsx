@@ -96,8 +96,8 @@ export function CTASection() {
               {[
                 {
                   icon: <CheckCircle2 className="h-6 w-6 text-accent" />,
-                  title: 'Medicaid Accepted',
-                  desc: 'We work with all Ohio Medicaid managed care plans.',
+                  title: 'Easy Scheduling',
+                  desc: 'Book online in minutes or call us for immediate help.',
                 },
                 {
                   icon: <ShieldCheck className="h-6 w-6 text-primary-sky" />,
@@ -106,8 +106,8 @@ export function CTASection() {
                 },
                 {
                   icon: <Clock className="h-6 w-6 text-amber-400" />,
-                  title: '24/7 Dispatch',
-                  desc: 'Our team is always available to assist with your ride.',
+                  title: 'Dispatch Support',
+                  desc: 'Dispatch available during business hours. Customer inquiries received 24/7.',
                 },
                 {
                   icon: <Phone className="h-6 w-6 text-accent-light" />,

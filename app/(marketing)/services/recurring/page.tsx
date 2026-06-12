@@ -32,14 +32,14 @@ const RELATED_SERVICES = SERVICES.filter((s) =>
 )
 
 const IMAGE_MAP: Record<string, string> = {
-  ambulatory: '/images/elderly-happy.jpg',
-  wheelchair: '/images/wheelchair-van.jpg',
-  dialysis: '/images/dialysis-treatment.jpg',
+  ambulatory: '/images/crtohio-ambulance.jpg',
+  wheelchair: '/images/wheelchair-care.jpg',
+  dialysis: '/images/service-dialysis.jpg',
   'medical-appointments': '/images/doctor-patient.jpg',
-  'hospital-discharge': '/images/hospital-corridor.jpg',
-  facility: '/images/medical-team.jpg',
-  'private-pay': '/images/transport-vehicle.jpg',
-  recurring: '/images/senior-care.jpg',
+  'hospital-discharge': '/images/hospital.jpg',
+  facility: '/images/about-team.jpg',
+  'private-pay': '/images/private-pay.jpeg',
+  recurring: '/images/recurring-rides.jpg',
 }
 
 export default function RecurringServicePage() {
@@ -120,7 +120,7 @@ export default function RecurringServicePage() {
             <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
               <div className="relative h-[300px] sm:h-[380px] lg:h-[420px]">
                 <Image
-                  src="/images/senior-care.jpg"
+                  src="/images/recurring-rides.jpg"
                   alt="Recurring medical transportation for regular appointments"
                   fill
                   priority

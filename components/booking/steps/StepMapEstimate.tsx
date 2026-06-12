@@ -30,6 +30,9 @@ export function StepMapEstimate({ registerValidate }: Props) {
   const [pricing, setPricing] = useState<PricingOutput | null>(null)
 
   useEffect(() => {
+    setLoading(true)
+    setError('')
+
     async function fetchEstimate() {
       if (
         !pickupInfo?.pickupLat ||
@@ -86,7 +89,9 @@ export function StepMapEstimate({ registerValidate }: Props) {
     }
 
     fetchEstimate()
-  }, [])
+  // Re-fetch if ride type or transport type changes (e.g. user goes back and changes selection)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rideTypeData?.rideType, transportType?.transportType])
 
   const distanceMiles = distance ? Math.round(distance.miles * 10) / 10 : 0
   // Format duration as hours and minutes

@@ -151,7 +151,7 @@ export function HeroSection() {
               </span>
               <span className="hidden md:flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-accent" />
-                <span>Medicaid Accepted</span>
+                <span>Private Pay Available</span>
               </span>
             </motion.div>
           </motion.div>

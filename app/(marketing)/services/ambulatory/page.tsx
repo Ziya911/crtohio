@@ -32,14 +32,14 @@ const RELATED_SERVICES = SERVICES.filter((s) =>
 )
 
 const IMAGE_MAP: Record<string, string> = {
-  ambulatory: '/images/elderly-happy.jpg',
-  wheelchair: '/images/wheelchair-van.jpg',
-  dialysis: '/images/dialysis-treatment.jpg',
+  ambulatory: '/images/crtohio-ambulance.jpg',
+  wheelchair: '/images/wheelchair-care.jpg',
+  dialysis: '/images/service-dialysis.jpg',
   'medical-appointments': '/images/doctor-patient.jpg',
-  'hospital-discharge': '/images/hospital-corridor.jpg',
-  facility: '/images/medical-team.jpg',
-  'private-pay': '/images/transport-vehicle.jpg',
-  recurring: '/images/senior-care.jpg',
+  'hospital-discharge': '/images/hospital.jpg',
+  facility: '/images/about-team.jpg',
+  'private-pay': '/images/private-pay.jpeg',
+  recurring: '/images/recurring-rides.jpg',
 }
 
 export default function AmbulatoryServicePage() {
@@ -112,8 +112,8 @@ export default function AmbulatoryServicePage() {
             {/* Right: Image */}
             <div className="relative h-[300px] sm:h-[380px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/elderly-happy.jpg"
-                alt="Elderly passenger smiling during ambulatory transportation"
+                src="/images/crtohio-ambulance.jpg"
+                alt="Care Ride Transportation ambulatory vehicle"
                 fill
                 priority
                 className="object-cover"
@@ -258,7 +258,7 @@ export default function AmbulatoryServicePage() {
               {
                 icon: Users,
                 title: 'Companion-Friendly',
-                text: 'Need a family member or caregiver to ride along? We welcome companions at no extra charge to provide additional support.',
+                text: 'A maximum of one companion (family member, caregiver, or aide) may ride along. Companions must be requested in advance during booking so we can ensure adequate space.',
               },
             ].map((item) => (
               <div

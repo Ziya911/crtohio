@@ -196,7 +196,7 @@ export function Footer() {
         <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex flex-col sm:flex-row sm:items-center gap-1.5">
             <p className="text-xs text-white/40">
-              All Rights Reserved © {currentYear} MedStats Billing LLC
+              All Rights Reserved © {currentYear} Care Ride Transportation
             </p>
           </div>
 

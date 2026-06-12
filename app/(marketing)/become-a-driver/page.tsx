@@ -69,7 +69,7 @@ const REQUIREMENTS = [
   'Pass a comprehensive background check',
   'Pass a drug screening',
   'Minimum 21 years of age',
-  'CPR/First Aid certification (preferred; training available)',
+  'CPR/First Aid certification (required; company-sponsored training available for candidates)',
   'Ability to assist passengers with mobility needs',
   'Professional, courteous, and patient demeanor',
   'Ability to follow GPS navigation and read maps',

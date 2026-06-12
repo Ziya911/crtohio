@@ -35,14 +35,14 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 }
 
 const IMAGE_MAP: Record<string, string> = {
-  ambulatory: '/images/elderly-happy.jpg',
+  ambulatory: '/images/crtohio-ambulance.jpg',
   wheelchair: '/images/wheelchair-care.jpg',
   dialysis: '/images/service-dialysis.jpg',
   'medical-appointments': '/images/doctor-patient.jpg',
   'hospital-discharge': '/images/hospital.jpg',
   facility: '/images/about-team.jpg',
-  'private-pay': '/images/van-transport.jpg',
-  recurring: '/images/caring-hands.jpg',
+  'private-pay': '/images/private-pay.jpeg',
+  recurring: '/images/recurring-rides.jpg',
 }
 
 export default function ServicesPage() {

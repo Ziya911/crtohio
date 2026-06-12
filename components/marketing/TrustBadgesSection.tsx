@@ -1,13 +1,13 @@
 'use client'
 
-import { ShieldCheck, Award, CreditCard, Headphones, Accessibility } from 'lucide-react'
+import { ShieldCheck, Award, Wallet, Headphones, Accessibility } from 'lucide-react'
 import { MotionWrapper } from '@/components/shared/MotionWrapper'
 
 const TRUST_BADGES = [
   { icon: <ShieldCheck className="h-6 w-6" />, label: 'Licensed & Insured', desc: 'Full coverage' },
   { icon: <Award className="h-6 w-6" />, label: 'NEMT Certified', desc: 'State approved' },
-  { icon: <CreditCard className="h-6 w-6" />, label: 'Medicaid Accepted', desc: 'Easy billing' },
-  { icon: <Headphones className="h-6 w-6" />, label: '24/7 Dispatch', desc: 'Always available' },
+  { icon: <Wallet className="h-6 w-6" />, label: 'Private Pay', desc: 'Transparent pricing' },
+  { icon: <Headphones className="h-6 w-6" />, label: 'Dispatch Available', desc: 'Business hours' },
   { icon: <Accessibility className="h-6 w-6" />, label: 'ADA Compliant', desc: 'Full access' },
 ]
 

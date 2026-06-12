@@ -32,14 +32,14 @@ const RELATED_SERVICES = SERVICES.filter((s) =>
 )
 
 const IMAGE_MAP: Record<string, string> = {
-  ambulatory: '/images/elderly-happy.jpg',
-  wheelchair: '/images/wheelchair-van.jpg',
-  dialysis: '/images/dialysis-treatment.jpg',
+  ambulatory: '/images/crtohio-ambulance.jpg',
+  wheelchair: '/images/wheelchair-care.jpg',
+  dialysis: '/images/service-dialysis.jpg',
   'medical-appointments': '/images/doctor-patient.jpg',
-  'hospital-discharge': '/images/hospital-corridor.jpg',
-  facility: '/images/medical-team.jpg',
-  'private-pay': '/images/transport-vehicle.jpg',
-  recurring: '/images/senior-care.jpg',
+  'hospital-discharge': '/images/hospital.jpg',
+  facility: '/images/about-team.jpg',
+  'private-pay': '/images/private-pay.jpeg',
+  recurring: '/images/recurring-rides.jpg',
 }
 
 export default function FacilityServicePage() {
@@ -128,7 +128,7 @@ export default function FacilityServicePage() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative rounded-2xl overflow-hidden border-2 border-white shadow-2xl max-w-md w-full aspect-[4/3]">
                 <Image
-                  src="/images/medical-team.jpg"
+                  src="/images/about-team.jpg"
                   alt="Medical team providing facility transportation services"
                   fill
                   priority

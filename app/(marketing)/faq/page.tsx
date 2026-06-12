@@ -56,12 +56,12 @@ const FAQS = [
       {
         question: 'Do you accept Medicaid for transportation?',
         answer:
-          'Yes, we accept Medicaid as a form of payment for eligible non-emergency medical transportation. You will need to provide your Medicaid ID number during the booking process. Please note that Medicaid coverage for transportation varies by plan and situation, so we recommend verifying your benefits with your Medicaid provider.',
+          'We are currently in the process of obtaining our Medicaid Provider ID. Once active, we will accept Medicaid for eligible non-emergency medical transportation. Please contact us for current payment options.',
       },
       {
         question: 'What payment methods do you accept?',
         answer:
-          'We accept Medicaid, private insurance, facility billing (for healthcare partners), and private pay (self-pay). For private pay rides, we offer transparent pricing with no hidden fees. Contact us for specific payment details and options.',
+          'We currently accept private insurance, facility billing (for healthcare partners), and private pay (self-pay). For private pay rides, we offer transparent pricing with no hidden fees. Contact us for specific payment details and options.',
       },
       {
         question: 'How much does a ride cost?',
@@ -91,7 +91,7 @@ const FAQS = [
       {
         question: 'Can a companion ride along with the patient?',
         answer:
-          'Yes, one companion (family member, caregiver, or aide) can accompany the patient at no additional charge in most cases. Please indicate during the booking process that a companion will be riding along so we can ensure adequate space in the vehicle.',
+          'A maximum of one companion (family member, caregiver, or aide) may accompany the patient. Companions must be requested in advance during the booking process so we can ensure adequate space in the vehicle.',
       },
       {
         question: 'Do your drivers help patients to and from the door?',

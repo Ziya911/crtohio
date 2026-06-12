@@ -23,7 +23,7 @@ const SERVICE = SERVICES.find((s) => s.slug === 'wheelchair')!
 export const metadata = generatePageMetadata({
   title: `Wheelchair Accessible Transportation | ${SITE_NAME}`,
   description:
-    'ADA-compliant wheelchair transportation with hydraulic ramps, secure tie-down systems, and trained drivers. Serving Cincinnati, Mason, West Chester, and surrounding Ohio areas.',
+    'ADA-compliant wheelchair transportation with ramps and lifts, secure tie-down systems, and trained drivers. Serving Cincinnati, Mason, West Chester, and surrounding Ohio areas.',
   path: '/services/wheelchair',
 })
 
@@ -32,20 +32,20 @@ const RELATED_SERVICES = SERVICES.filter((s) =>
 )
 
 const IMAGE_MAP: Record<string, string> = {
-  ambulatory: '/images/elderly-happy.jpg',
-  wheelchair: '/images/wheelchair-van.jpg',
-  dialysis: '/images/dialysis-treatment.jpg',
+  ambulatory: '/images/crtohio-ambulance.jpg',
+  wheelchair: '/images/wheelchair-care.jpg',
+  dialysis: '/images/service-dialysis.jpg',
   'medical-appointments': '/images/doctor-patient.jpg',
-  'hospital-discharge': '/images/hospital-corridor.jpg',
-  facility: '/images/medical-team.jpg',
-  'private-pay': '/images/transport-vehicle.jpg',
-  recurring: '/images/senior-care.jpg',
+  'hospital-discharge': '/images/hospital.jpg',
+  facility: '/images/about-team.jpg',
+  'private-pay': '/images/private-pay.jpeg',
+  recurring: '/images/recurring-rides.jpg',
 }
 
 export default function WheelchairServicePage() {
   const serviceJsonLd = generateServiceJsonLd(
     SERVICE.title,
-    'ADA-compliant wheelchair accessible transportation with hydraulic ramps, secure tie-down systems, and specially trained drivers for safe medical transport across Ohio.',
+    'ADA-compliant wheelchair accessible transportation with ramps and lifts, secure tie-down systems, and specially trained drivers for safe medical transport across Ohio.',
     SERVICE.slug
   )
   const breadcrumbJsonLd = generateBreadcrumbJsonLd([
@@ -101,7 +101,7 @@ export default function WheelchairServicePage() {
                 Wheelchair Accessible Transportation
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-6">
-                ADA-compliant vehicles equipped with hydraulic wheelchair ramps and secure tie-down
+                ADA-compliant vehicles equipped with wheelchair ramps and lifts and secure tie-down
                 systems. Our trained drivers ensure safe, comfortable transport for passengers using
                 manual or powered wheelchairs.
               </p>
@@ -110,7 +110,7 @@ export default function WheelchairServicePage() {
                   ADA Compliant
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full border border-primary/20">
-                  Hydraulic Ramps
+                  Ramps &amp; Lifts
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full border border-primary/20">
                   Secure Tie-Downs
@@ -121,7 +121,7 @@ export default function WheelchairServicePage() {
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <div className="relative h-[300px] sm:h-[380px] lg:h-[420px]">
                 <Image
-                  src="/images/wheelchair-van.jpg"
+                  src="/images/wheelchair-care.jpg"
                   alt="ADA-compliant wheelchair accessible transportation vehicle"
                   fill
                   priority
@@ -145,7 +145,7 @@ export default function WheelchairServicePage() {
               <p>
                 Wheelchair accessible transportation is a specialized non-emergency medical
                 transportation service designed for individuals who use wheelchairs, whether manual
-                or powered. Our vehicles are specifically outfitted with hydraulic ramps or lifts,
+                or powered. Our vehicles are specifically outfitted with manual or hydraulic ramps and lifts,
                 wheelchair securement systems, and spacious interiors that allow passengers to ride
                 safely and comfortably without leaving their wheelchair.
               </p>
@@ -184,7 +184,7 @@ export default function WheelchairServicePage() {
               'Individuals with spinal cord injuries, multiple sclerosis, or cerebral palsy',
               'Dialysis patients who need wheelchair transport multiple times per week',
               'Residents of nursing homes and assisted living facilities',
-              'Veterans and individuals covered by Medicaid transportation benefits',
+              'Veterans and individuals covered by insurance transportation benefits',
             ].map((item) => (
               <div key={item} className="bg-white rounded-xl p-4 border border-border/60 shadow-sm hover:shadow-md transition-all">
                 <div className="flex items-start gap-3">
@@ -206,8 +206,8 @@ export default function WheelchairServicePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: 'Hydraulic Ramps & Lifts',
-                text: 'Our vehicles feature powered ramps or lifts with non-slip surfaces for safe, smooth boarding from any surface.',
+                title: 'Ramps & Lifts',
+                text: 'Our vehicles feature manual or hydraulic ramps and lifts with non-slip surfaces for safe, smooth boarding from any surface.',
               },
               {
                 title: 'Four-Point Tie-Downs',
@@ -223,7 +223,7 @@ export default function WheelchairServicePage() {
               },
               {
                 title: 'Spacious Cabin Design',
-                text: 'Extra interior clearance accommodates all standard and powered wheelchair sizes with room for companion seating.',
+                text: 'Extra interior clearance accommodates all standard and powered wheelchair sizes. One companion may be requested in advance to ride along.',
               },
               {
                 title: 'Regular Safety Inspections',

@@ -15,8 +15,8 @@ const CRT_OHIO_BRAND = {
   businessAddress: 'Cincinnati, OH',
   businessAddressLocality: 'Cincinnati',
   businessAddressRegion: 'OH',
-  businessHours: 'Mon–Fri: 6:00 AM – 8:00 PM | Sat: 7:00 AM – 5:00 PM | Sun: Closed',
-  logoPath: '/CRTOhio-logo.png',
+  businessHours: 'Mon–Fri: 7:00 AM – 8:00 PM | Sat: 8:00 AM – 5:00 PM | Sun: Closed',
+  logoPath: '/CRTOhio-logo-2.png',
 } as const
 
 const MEDSTATS_BRAND = {
@@ -31,7 +31,7 @@ const MEDSTATS_BRAND = {
   businessAddress: '4627 W. Sunset Blvd Tampa, FL 33629',
   businessAddressLocality: 'Tampa',
   businessAddressRegion: 'FL',
-  businessHours: 'Mon–Fri: 6:00 AM – 8:00 PM | Sat: 7:00 AM – 5:00 PM | Sun: Closed',
+  businessHours: 'Mon–Fri: 7:00 AM – 8:00 PM | Sat: 8:00 AM – 5:00 PM | Sun: Closed',
   logoPath: '/Medstats-logo.png',
 } as const
 
@@ -144,10 +144,10 @@ export const NAV_LINKS = [
 ] as const
 
 export const PRICING_CONFIG = {
-  baseFareAmbulatory: 40,
-  baseFareWheelchair: 75,
-  perMileAmbulatory: 2.75,
-  perMileWheelchair: 3.75,
+  baseFareAmbulatory: 30,
+  baseFareWheelchair: 50,
+  perMileAmbulatory: 2.25,
+  perMileWheelchair: 3.25,
   afterHoursMultiplier: 1.25,   // +25% on base (before 7am / after 7pm / weekends)
   buildingAssist: 10,
   stairs: 15,

@@ -32,14 +32,14 @@ const RELATED_SERVICES = SERVICES.filter((s) =>
 )
 
 const IMAGE_MAP: Record<string, string> = {
-  ambulatory: '/images/elderly-happy.jpg',
-  wheelchair: '/images/wheelchair-van.jpg',
-  dialysis: '/images/dialysis-treatment.jpg',
+  ambulatory: '/images/crtohio-ambulance.jpg',
+  wheelchair: '/images/wheelchair-care.jpg',
+  dialysis: '/images/service-dialysis.jpg',
   'medical-appointments': '/images/doctor-patient.jpg',
-  'hospital-discharge': '/images/hospital-corridor.jpg',
-  facility: '/images/medical-team.jpg',
-  'private-pay': '/images/transport-vehicle.jpg',
-  recurring: '/images/senior-care.jpg',
+  'hospital-discharge': '/images/hospital.jpg',
+  facility: '/images/about-team.jpg',
+  'private-pay': '/images/private-pay.jpeg',
+  recurring: '/images/recurring-rides.jpg',
 }
 
 export default function MedicalAppointmentsServicePage() {

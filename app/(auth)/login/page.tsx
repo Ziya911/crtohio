@@ -69,7 +69,9 @@ function LoginForm() {
       const session = await sessionRes.json()
 
       if (session?.user?.role === 'ADMIN') {
-        router.push('/admin')
+        // Use callbackUrl if it's an admin route, otherwise default to /admin
+        const dest = callbackUrl.startsWith('/admin') ? callbackUrl : '/admin'
+        router.push(dest)
       } else {
         router.push(callbackUrl)
       }

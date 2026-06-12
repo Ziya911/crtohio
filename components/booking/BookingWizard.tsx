@@ -149,8 +149,14 @@ export function BookingWizard({ userPrefill }: { userPrefill?: UserPrefill }) {
       store.reset()
       router.push(`/book/confirmation?id=${data.publicId}`)
     } catch (err) {
+      const isNetworkError =
+        err instanceof TypeError && err.message.toLowerCase().includes('fetch')
       setSubmitError(
-        err instanceof Error ? err.message : 'Something went wrong'
+        isNetworkError
+          ? 'Your request may have been received. Please check your email for a confirmation, or contact us directly to confirm before re-submitting.'
+          : err instanceof Error
+          ? err.message
+          : 'Something went wrong. Please try again.'
       )
     } finally {
       setIsSubmitting(false)

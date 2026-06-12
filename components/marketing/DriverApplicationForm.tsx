@@ -287,7 +287,7 @@ export function DriverApplicationForm() {
           ))}
         </div>
         <p className="text-xs text-muted-foreground mt-1">
-          CPR certification is preferred but not required. Training can be provided.
+          CPR/First Aid certification is required. Company-sponsored training is available for candidates who do not yet hold certification.
         </p>
         {fieldErrors.hasCprCert && <p className="text-xs text-emergency mt-1">{fieldErrors.hasCprCert}</p>}
       </fieldset>

@@ -90,7 +90,7 @@ export function StepRideNotes({ registerValidate }: Props) {
         </div>
 
         <div>
-          <Label htmlFor="preferredLanguage">Preferred Language for Staff</Label>
+          <Label htmlFor="preferredLanguage">Preferred Communication Language</Label>
           <select
             id="preferredLanguage"
             value={form.preferredLanguage || ''}
@@ -108,7 +108,7 @@ export function StepRideNotes({ registerValidate }: Props) {
             <option value="other">Other</option>
           </select>
           <p className="mt-1 text-xs text-muted-foreground">
-            Select the language you prefer our staff to communicate in during your ride.
+            If you or the patient prefer to communicate in a language other than English, please let us know so we can try to accommodate.
           </p>
         </div>
 

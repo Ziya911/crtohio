@@ -422,8 +422,8 @@ export default function PricingPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 {
-                  title: 'Medicaid',
-                  description: 'Covered transportation for eligible Medicaid members',
+                  title: 'Private Pay',
+                  description: 'Self-pay with transparent, upfront pricing',
                 },
                 {
                   title: 'Private Insurance',
@@ -432,10 +432,6 @@ export default function PricingPage() {
                 {
                   title: 'Facility Billing',
                   description: 'Direct billing for healthcare facility partners',
-                },
-                {
-                  title: 'Private Pay',
-                  description: 'Self-pay with transparent, upfront pricing',
                 },
               ].map((method) => (
                 <div
@@ -466,8 +462,8 @@ export default function PricingPage() {
                     The prices listed on this page are estimates and may vary based on actual
                     distance traveled, traffic conditions, and specific service needs. Final
                     pricing is determined at the time of booking confirmation based on actual
-                    route distance. Medicaid and insurance-covered rides are subject to payer
-                    approval and coverage terms.
+                    route distance. Insurance-covered rides are subject to payer approval and
+                    coverage terms.
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     For an accurate estimate tailored to your specific trip, use our online

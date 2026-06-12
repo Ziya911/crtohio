@@ -26,7 +26,7 @@ export default function PrivacyPage() {
       />
 
       {/* Header */}
-      <section className="gradient-hero section-padding">
+      <section className="gradient-hero section-padding pb-0! mb-0!">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-4xl md:text-5xl font-extrabold text-primary mb-4">
@@ -40,7 +40,7 @@ export default function PrivacyPage() {
       </section>
 
       {/* Content */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white p-16!">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="prose prose-lg max-w-none text-foreground space-y-8">
