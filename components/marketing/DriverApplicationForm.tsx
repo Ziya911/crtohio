@@ -163,6 +163,9 @@ export function DriverApplicationForm() {
             className={`w-full px-4 py-2.5 border rounded-lg text-sm text-foreground bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors ${fieldErrors.phone ? 'border-emergency' : 'border-border'}`}
           />
           {fieldErrors.phone && <p className="text-xs text-emergency mt-1">{fieldErrors.phone}</p>}
+          <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
+            By providing your phone number, you consent to receive SMS messages from Care Ride Transportation regarding your driver application. Message &amp; data rates may apply. Reply STOP to opt out.
+          </p>
         </div>
         <div data-has-error={!!fieldErrors.email}>
           <label htmlFor="email" className="flex items-center gap-2 text-sm font-medium text-foreground mb-1.5">

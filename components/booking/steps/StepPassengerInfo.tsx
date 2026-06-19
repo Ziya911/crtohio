@@ -117,6 +117,9 @@ export function StepPassengerInfo({ registerValidate, prefill }: Props) {
               {errors.passengerPhone}
             </p>
           )}
+          <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
+            By providing your phone number, you consent to receive SMS messages from Care Ride Transportation regarding your ride requests. Message &amp; data rates may apply. Reply STOP to opt out.
+          </p>
         </div>
 
         <div>

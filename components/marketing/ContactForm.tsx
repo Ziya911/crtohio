@@ -137,6 +137,9 @@ export function ContactForm() {
             placeholder="(555) 123-4567"
             className="w-full px-4 py-3 bg-white border border-border rounded-xl text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
           />
+          <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
+            By providing your phone number, you consent to receive SMS messages from Care Ride Transportation regarding your inquiry. Message &amp; data rates may apply. Reply STOP to opt out.
+          </p>
         </div>
       </div>
 
