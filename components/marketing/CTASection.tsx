@@ -13,7 +13,7 @@ export function CTASection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/van-transport.jpg"
+          src="/images/hero-ambulance.jpg"
           alt="Medical transportation vehicle"
           fill
           className="object-cover"

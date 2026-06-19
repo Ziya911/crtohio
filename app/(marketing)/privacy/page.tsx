@@ -176,9 +176,9 @@ export default function PrivacyPage() {
                   <li><strong>Healthcare Facilities:</strong> When you book a ride to or from a
                     medical facility, we may share limited ride information (pickup time,
                     passenger name) with that facility to coordinate your transportation</li>
-                  <li><strong>Insurance and Medicaid:</strong> For rides billed to insurance or
-                    Medicaid, we share necessary trip and passenger information with the
-                    applicable payer as required for claims processing</li>
+                  <li><strong>Insurance:</strong> For rides billed to insurance, we share
+                    necessary trip and passenger information with the applicable payer as
+                    required for claims processing</li>
                   <li><strong>Legal Requirements:</strong> We may disclose your information if
                     required by law, court order, or governmental regulation, or when we
                     believe disclosure is necessary to protect our rights, your safety, or
@@ -187,6 +187,17 @@ export default function PrivacyPage() {
                     or sale of assets, your information may be transferred as part of that
                     transaction. We will notify you of any such change</li>
                 </ul>
+                <div className="mt-4 p-4 bg-muted rounded-lg border border-border">
+                  <p className="text-muted-foreground leading-relaxed">
+                    <strong>SMS &amp; Mobile Communications:</strong> We do not share, sell, rent,
+                    or disclose consumer personal information, including phone numbers, to third
+                    parties or affiliates for marketing, lead generation, or promotional purposes.
+                    Mobile information and SMS consent data will not be shared with third parties
+                    or affiliates for marketing or promotional purposes. SMS opt-in data and
+                    consent information are used solely for communication with the customer and
+                    are never sold or shared.
+                  </p>
+                </div>
               </div>
 
               {/* 5. Data Security */}
