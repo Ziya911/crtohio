@@ -109,38 +109,39 @@ export function ContactForm() {
         {fieldErrors.name && <p className="text-xs text-emergency mt-1">{fieldErrors.name}</p>}
       </div>
 
-      {/* Email + Phone row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <div>
-          <label htmlFor="contact-email" className="block text-sm font-medium text-foreground mb-1.5">
-            Email Address <span className="text-emergency">*</span>
-          </label>
-          <input
-            type="email"
-            id="contact-email"
-            value={form.email}
-            onChange={(e) => updateField('email', e.target.value)}
-            placeholder="you@example.com"
-            className={`w-full px-4 py-3 bg-white border rounded-xl text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors ${fieldErrors.email ? 'border-emergency' : 'border-border'}`}
-          />
-          {fieldErrors.email && <p className="text-xs text-emergency mt-1">{fieldErrors.email}</p>}
-        </div>
-        <div>
-          <label htmlFor="contact-phone" className="block text-sm font-medium text-foreground mb-1.5">
-            Phone Number
-          </label>
-          <input
-            type="tel"
-            id="contact-phone"
-            value={form.phone}
-            onChange={(e) => updateField('phone', e.target.value)}
-            placeholder="(555) 123-4567"
-            className="w-full px-4 py-3 bg-white border border-border rounded-xl text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-          />
-          <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
-            By providing your phone number, you consent to receive SMS messages from Care Ride Transportation regarding your inquiry. Message &amp; data rates may apply. Reply STOP to opt out.
-          </p>
-        </div>
+      {/* Email row */}
+      <div>
+        <label htmlFor="contact-email" className="block text-sm font-medium text-foreground mb-1.5">
+          Email Address <span className="text-emergency">*</span>
+        </label>
+        <input
+          type="email"
+          id="contact-email"
+          value={form.email}
+          onChange={(e) => updateField('email', e.target.value)}
+          placeholder="you@example.com"
+          className={`w-full px-4 py-3 bg-white border rounded-xl text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors ${fieldErrors.email ? 'border-emergency' : 'border-border'}`}
+        />
+        {fieldErrors.email && <p className="text-xs text-emergency mt-1">{fieldErrors.email}</p>}
+      </div>
+
+      {/* Phone — full width so consent text is readable */}
+      <div>
+        <label htmlFor="contact-phone" className="block text-sm font-medium text-foreground mb-1.5">
+          Phone Number
+        </label>
+        <input
+          type="tel"
+          id="contact-phone"
+          value={form.phone}
+          onChange={(e) => updateField('phone', e.target.value)}
+          placeholder="(555) 123-4567"
+          className="w-full px-4 py-3 bg-white border border-border rounded-xl text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+        />
+        <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
+          By providing your phone number, you agree to receive SMS messages from Care Ride Transportation regarding your request. Message and data rates may apply. Message frequency varies. Reply STOP to opt out and HELP for assistance.{' '}
+          <a href="/privacy" className="underline hover:text-primary transition-colors">View our Privacy Policy</a>.
+        </p>
       </div>
 
       {/* Subject */}

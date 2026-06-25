@@ -84,7 +84,7 @@ export function StepPassengerInfo({ registerValidate, prefill }: Props) {
           )}
         </div>
 
-        <div>
+        <div className="sm:col-span-2">
           <Label htmlFor="passengerDob">
             Date of Birth <span className="text-red-500">*</span>
           </Label>
@@ -100,7 +100,7 @@ export function StepPassengerInfo({ registerValidate, prefill }: Props) {
           )}
         </div>
 
-        <div>
+        <div className="sm:col-span-2">
           <Label htmlFor="passengerPhone">
             Phone Number <span className="text-red-500">*</span>
           </Label>
@@ -118,7 +118,8 @@ export function StepPassengerInfo({ registerValidate, prefill }: Props) {
             </p>
           )}
           <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
-            By providing your phone number, you consent to receive SMS messages from Care Ride Transportation regarding your ride requests. Message &amp; data rates may apply. Reply STOP to opt out.
+            By providing your phone number, you agree to receive SMS messages from Care Ride Transportation regarding your request. Message and data rates may apply. Message frequency varies. Reply STOP to opt out and HELP for assistance.{' '}
+            <a href="/privacy" className="underline hover:text-primary transition-colors">View our Privacy Policy</a>.
           </p>
         </div>
 

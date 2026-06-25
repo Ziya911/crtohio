@@ -147,26 +147,29 @@ export function DriverApplicationForm() {
         {fieldErrors.fullName && <p className="text-xs text-emergency mt-1">{fieldErrors.fullName}</p>}
       </div>
 
-      {/* Phone & Email */}
+      {/* Phone — full width so consent text is readable */}
+      <div data-has-error={!!fieldErrors.phone}>
+        <label htmlFor="phone" className="flex items-center gap-2 text-sm font-medium text-foreground mb-1.5">
+          <Phone className="size-4 text-primary" />
+          Phone Number <span className="text-emergency">*</span>
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="(513) 555-0100"
+          value={form.phone as string}
+          onChange={(e) => updateField('phone', e.target.value)}
+          className={`w-full px-4 py-2.5 border rounded-lg text-sm text-foreground bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors ${fieldErrors.phone ? 'border-emergency' : 'border-border'}`}
+        />
+        {fieldErrors.phone && <p className="text-xs text-emergency mt-1">{fieldErrors.phone}</p>}
+        <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
+          By providing your phone number, you agree to receive SMS messages from Care Ride Transportation regarding your request. Message and data rates may apply. Message frequency varies. Reply STOP to opt out and HELP for assistance.{' '}
+          <a href="/privacy" className="underline hover:text-primary transition-colors">View our Privacy Policy</a>.
+        </p>
+      </div>
+
+      {/* Email */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div data-has-error={!!fieldErrors.phone}>
-          <label htmlFor="phone" className="flex items-center gap-2 text-sm font-medium text-foreground mb-1.5">
-            <Phone className="size-4 text-primary" />
-            Phone Number <span className="text-emergency">*</span>
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            placeholder="(513) 555-0100"
-            value={form.phone as string}
-            onChange={(e) => updateField('phone', e.target.value)}
-            className={`w-full px-4 py-2.5 border rounded-lg text-sm text-foreground bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors ${fieldErrors.phone ? 'border-emergency' : 'border-border'}`}
-          />
-          {fieldErrors.phone && <p className="text-xs text-emergency mt-1">{fieldErrors.phone}</p>}
-          <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
-            By providing your phone number, you consent to receive SMS messages from Care Ride Transportation regarding your driver application. Message &amp; data rates may apply. Reply STOP to opt out.
-          </p>
-        </div>
         <div data-has-error={!!fieldErrors.email}>
           <label htmlFor="email" className="flex items-center gap-2 text-sm font-medium text-foreground mb-1.5">
             <Mail className="size-4 text-primary" />

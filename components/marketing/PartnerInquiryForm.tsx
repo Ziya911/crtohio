@@ -126,35 +126,39 @@ export function PartnerInquiryForm() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label htmlFor="partner-email" className="block text-sm font-medium text-foreground mb-1.5">
-            Email Address <span className="text-emergency">*</span>
-          </label>
-          <input
-            type="email"
-            id="partner-email"
-            value={form.email}
-            onChange={(e) => updateField('email', e.target.value)}
-            placeholder="you@organization.com"
-            className={`w-full px-4 py-2.5 border rounded-lg text-sm text-foreground bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent ${fieldErrors.email ? 'border-emergency' : 'border-border'}`}
-          />
-          {fieldErrors.email && <p className="text-xs text-emergency mt-1">{fieldErrors.email}</p>}
-        </div>
-        <div>
-          <label htmlFor="partner-phone" className="block text-sm font-medium text-foreground mb-1.5">
-            Phone Number <span className="text-emergency">*</span>
-          </label>
-          <input
-            type="tel"
-            id="partner-phone"
-            value={form.phone}
-            onChange={(e) => updateField('phone', e.target.value)}
-            placeholder="(513) 555-0100"
-            className={`w-full px-4 py-2.5 border rounded-lg text-sm text-foreground bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent ${fieldErrors.phone ? 'border-emergency' : 'border-border'}`}
-          />
-          {fieldErrors.phone && <p className="text-xs text-emergency mt-1">{fieldErrors.phone}</p>}
-        </div>
+      <div>
+        <label htmlFor="partner-email" className="block text-sm font-medium text-foreground mb-1.5">
+          Email Address <span className="text-emergency">*</span>
+        </label>
+        <input
+          type="email"
+          id="partner-email"
+          value={form.email}
+          onChange={(e) => updateField('email', e.target.value)}
+          placeholder="you@organization.com"
+          className={`w-full px-4 py-2.5 border rounded-lg text-sm text-foreground bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent ${fieldErrors.email ? 'border-emergency' : 'border-border'}`}
+        />
+        {fieldErrors.email && <p className="text-xs text-emergency mt-1">{fieldErrors.email}</p>}
+      </div>
+
+      {/* Phone — full width so consent text is readable */}
+      <div>
+        <label htmlFor="partner-phone" className="block text-sm font-medium text-foreground mb-1.5">
+          Phone Number <span className="text-emergency">*</span>
+        </label>
+        <input
+          type="tel"
+          id="partner-phone"
+          value={form.phone}
+          onChange={(e) => updateField('phone', e.target.value)}
+          placeholder="(513) 555-0100"
+          className={`w-full px-4 py-2.5 border rounded-lg text-sm text-foreground bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent ${fieldErrors.phone ? 'border-emergency' : 'border-border'}`}
+        />
+        {fieldErrors.phone && <p className="text-xs text-emergency mt-1">{fieldErrors.phone}</p>}
+        <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
+          By providing your phone number, you agree to receive SMS messages from Care Ride Transportation regarding your request. Message and data rates may apply. Message frequency varies. Reply STOP to opt out and HELP for assistance.{' '}
+          <a href="/privacy" className="underline hover:text-primary transition-colors">View our Privacy Policy</a>.
+        </p>
       </div>
 
       <div>
